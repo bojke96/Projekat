@@ -34,6 +34,23 @@ public class Homepage extends BasePage {
         return this;
     }
 
+    public Homepage selectFuelType(String fuelType){
+        clickOnElement(Locators.fuelTypeMenu);
+        clickOnElement(Locators.setFuelType(fuelType));
+        return this;
+    }
+
+    public Homepage selectRegion(String region){
+        clickOnElement(Locators.regionMenu);
+        clickOnElement(Locators.setRegion(region));
+        return this;
+    }
+
+    public SearchResults search(){
+        clickOnElement(Locators.searchButton);
+        return new SearchResults();
+    }
+
 
 
 
