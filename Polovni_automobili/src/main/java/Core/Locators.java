@@ -19,20 +19,20 @@ public class Locators {
 
     public static String NEW_WINDOW_BUTTON = "//button[@id='windowButton']";
 
-    public static By brandSearchField = By.xpath("//div[@class='SumoSelect sumo_brand']//input");
+    public static By brandSearchField = By.xpath("//div[@class='SumoSelect sumo_brand open']//input");
+    public static By brandSearch = By.xpath("//div[@class='SumoSelect sumo_brand']");
 
     public static By setBrand(String brandName){
         String brandSearchLocator = "//div[contains(@class,'open')]//li//label[text()='****']";
-        brandSearchLocator.replace("****",brandName);
-        return By.xpath(brandSearchLocator);
+        return By.xpath( brandSearchLocator.replace("****",brandName));
     }
     public static By setModel(String modelName){
         String modelSearchLocator = "//div[contains(@class,'open')]//li//label[text()='****']";
-        modelSearchLocator.replace("****",modelName);
-        return By.xpath(modelSearchLocator);
+        return By.xpath( modelSearchLocator.replace("****",modelName););
     }
 
     public static By modelSearchField = By.xpath("//div[@class='SumoSelect sumo_model']//input");
+    public static By modelSearch = By.xpath("//div[@class='SumoSelect sumo_model']");
 
     public static By yearFromMenu = By.xpath("//div[@class='SumoSelect sumo_year_from']");
 
@@ -42,8 +42,7 @@ public class Locators {
 
     public static By setYearInLocator(String year){
        String yearLocator = "//div[contains(@class,'open')]//li//label[text()='**** god.']";
-       yearLocator.replace("****",year);
-       return By.xpath(yearLocator);
+       return By.xpath( yearLocator.replace("****",year));
     }
     public static By fuelTypeMenu = By.xpath("//div[@class='SumoSelect sumo_fuel']");
 
@@ -51,14 +50,13 @@ public class Locators {
 
     public static By setFuelType(String fuelType){
         String fuelTypeLocator = "//div[@class='SumoSelect sumo_fuel open']//li//label[text() = '****']";
-        fuelTypeLocator.replace("****",fuelType);
-        return By.xpath(fuelTypeLocator);
+        return By.xpath( fuelTypeLocator.replace("****",fuelType));
     }
 
     public static By setRegion(String region){
         String regionLocator = "//div[contains(@class,'open')]//li//label[text()='****']";
         regionLocator.replace("****",region);
-        return By.xpath(regionLocator);
+        return By.xpath( regionLocator.replace("****",region));
     }
 
     public static By regionMenu = By.xpath("//div[@class='SumoSelect sumo_region']");
@@ -73,8 +71,7 @@ public class Locators {
 
     public static By setSortType(String sortType){
         String sortTypeLocator = "//div[contains(@class,'open')]//li//label[text()='****']";
-        sortTypeLocator.replace("****",sortType);
-        return By.xpath(sortTypeLocator);
+        return By.xpath(sortTypeLocator.replace("****",sortType));
     }
 
     public static By secondSearchResult = By.xpath("(//article)[2]");
@@ -83,8 +80,7 @@ public class Locators {
 
     public static By getCarInformation(String information){
         String carInformationLocator = "//div[text() = 'Marka']//following-sibling::div";
-        carInformationLocator.replace("****",information);
-        return By.xpath(carInformationLocator);
+        return By.xpath(carInformationLocator.replace("****",information));
     }
 
 

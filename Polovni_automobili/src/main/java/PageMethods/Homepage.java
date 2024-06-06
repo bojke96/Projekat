@@ -6,9 +6,15 @@ import Core.Locators;
 public class Homepage extends BasePage {
 
     public Homepage openBrandMenu(){
-        clickOnElement(Locators.brandSearchField);
+        clickOnElement(Locators.brandSearch);
         return this;
     }
+    public Homepage openModelMenu(){
+        clickOnElement(Locators.modelSearchField);
+        return this;
+    }
+
+
 
     public Homepage selectBrand(String brandName){
         typeText(brandName,Locators.brandSearchField);
