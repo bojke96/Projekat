@@ -27,11 +27,11 @@ public class Locators {
         return By.xpath( brandSearchLocator.replace("****",brandName));
     }
     public static By setModel(String modelName){
-        String modelSearchLocator = "//div[contains(@class,'open')]//li//label[text()='****']";
-        return By.xpath( modelSearchLocator.replace("****",modelName););
+        String modelSearchLocator = "//div[contains(@class,'open')]//li[normalize-space(text()='****')][not(contains(@class,'hidden'))]";
+        return By.xpath( modelSearchLocator.replace("****",modelName));
     }
 
-    public static By modelSearchField = By.xpath("//div[@class='SumoSelect sumo_model']//input");
+    public static By modelSearchField = By.xpath("//div[@class='SumoSelect sumo_model open']//input");
     public static By modelSearch = By.xpath("//div[@class='SumoSelect sumo_model']");
 
     public static By yearFromMenu = By.xpath("//div[@class='SumoSelect sumo_year_from']");
@@ -55,7 +55,6 @@ public class Locators {
 
     public static By setRegion(String region){
         String regionLocator = "//div[contains(@class,'open')]//li//label[text()='****']";
-        regionLocator.replace("****",region);
         return By.xpath( regionLocator.replace("****",region));
     }
 
@@ -74,7 +73,7 @@ public class Locators {
         return By.xpath(sortTypeLocator.replace("****",sortType));
     }
 
-    public static By secondSearchResult = By.xpath("(//article)[2]");
+    public static By secondSearchResult = By.xpath("(//article)[2]//a[@class = 'ga-title']");
 
     public static By getCarInformation = By.xpath("//div[text() = 'Marka']//following-sibling::div");
 

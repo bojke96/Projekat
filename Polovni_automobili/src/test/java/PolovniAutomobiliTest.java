@@ -5,12 +5,13 @@ import org.junit.jupiter.api.Test;
 
 public class PolovniAutomobiliTest extends Homepage {
 
-    public static final String CAR_BRAND = "BMW";
-     public static final String CAR_MODEL = "X7";
+    public static final String CAR_BRAND = "Fiat";
+     public static final String CAR_MODEL = "Grande Punto";
      public static final String FUEL_TYPE = "Dizel";
-    public static final String REGION = "Šumadijski";
-     public static final int YEAR_FROM = 2010;
-    public static final int YEAR_TO = 2015;
+    public static final String REGION = "Centralna Srbija";
+     public static final int YEAR_FROM = 2005;
+    public static final int YEAR_TO = 2023;
+    public static final String SEARCH = "ceni silazno";
 
 
 
@@ -31,7 +32,13 @@ public class PolovniAutomobiliTest extends Homepage {
               .openModelMenu()
               .selectModel(CAR_MODEL).selectFuelType(FUEL_TYPE)
               .selectYearFrom(YEAR_FROM).selectYearTo(YEAR_TO)
-              .selectRegion(REGION).search();
+              .selectRegion(REGION).search().sortSearch(SEARCH)
+              .selectSecondSearchPage()
+              .selectSearchResult()
+              .verifyBrand(CAR_BRAND)
+              .verifyModel(CAR_MODEL)
+              .verifyFuelType(FUEL_TYPE)
+              .verifyProductionYear(YEAR_FROM,YEAR_TO);
     }
 
 

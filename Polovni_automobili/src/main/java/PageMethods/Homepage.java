@@ -10,7 +10,7 @@ public class Homepage extends BasePage {
         return this;
     }
     public Homepage openModelMenu(){
-        clickOnElement(Locators.modelSearchField);
+        clickOnElement(Locators.modelSearch);
         return this;
     }
 

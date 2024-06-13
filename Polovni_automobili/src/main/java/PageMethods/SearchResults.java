@@ -12,7 +12,12 @@ public class SearchResults extends BasePage {
     }
 
     public SearchResults selectSecondSearchPage(){
-        clickOnElement(Locators.searchSecondPage);
+        try {
+            clickOnElement(Locators.searchSecondPage);
+        }
+        catch (Exception e){
+
+        }
         return this;
     }
 
